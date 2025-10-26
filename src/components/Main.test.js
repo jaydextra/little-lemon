@@ -1,5 +1,19 @@
 import { initializeTimes, updateTimes } from '../utils/bookingReducer';
 
+// Mock the global fetchAPI function
+beforeAll(() => {
+  global.fetchAPI = jest.fn((date) => {
+    return [
+      '17:00',
+      '18:00',
+      '19:00',
+      '20:00',
+      '21:00',
+      '22:00'
+    ];
+  });
+});
+
 describe('Booking Reducer Functions', () => {
   describe('initializeTimes', () => {
     test('Returns the correct initial available times', () => {

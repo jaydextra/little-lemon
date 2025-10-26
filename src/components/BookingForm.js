@@ -19,22 +19,42 @@ function BookingForm({ availableTimes, dispatch }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     
-    // Log the form data for now
-    console.log('Form submitted:', {
+    // Prepare form data
+    const formData = {
       date,
       time,
-      guests,
+      guests: parseInt(guests),
       occasion
-    });
+    };
     
-    // Reset form after submission
-    setDate('');
-    setTime('');
-    setGuests('');
-    setOccasion('');
-    
-    // Show success message (can be replaced with actual submission logic)
-    alert('Reservation submitted successfully!');
+    // Submit to API if available
+    if (typeof window.submitAPI !== 'undefined') {
+      const success = window.submitAPI(formData);
+      
+      if (success) {
+        // Reset form after successful submission
+        setDate('');
+        setTime('');
+        setGuests('');
+        setOccasion('');
+        
+        // Show success message
+        alert('Reservation submitted successfully!');
+      } else {
+        alert('Failed to submit reservation. Please try again.');
+      }
+    } else {
+      // Fallback if API is not loaded
+      console.log('Form submitted:', formData);
+      
+      // Reset form
+      setDate('');
+      setTime('');
+      setGuests('');
+      setOccasion('');
+      
+      alert('Reservation submitted (API not loaded - demo mode)!');
+    }
   };
 
   return (
