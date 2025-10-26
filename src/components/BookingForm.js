@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../styles/BookingForm.css';
 
-function BookingForm({ availableTimes, dispatch, submitForm }) {
+function BookingForm({ availableTimes, dispatch, submitForm, onCancel }) {
   // State for form fields
   const [date, setDate] = useState('');
   const [time, setTime] = useState('');
@@ -171,15 +171,27 @@ function BookingForm({ availableTimes, dispatch, submitForm }) {
         </select>
       </div>
 
-      <button 
-        type="submit" 
-        className="submit-button"
-        disabled={!isFormValid()}
-        aria-label="On Click"
-        aria-describedby={!isFormValid() ? "submit-help" : undefined}
-      >
-        Make Your Reservation
-      </button>
+      <div className="form-actions">
+        {onCancel && (
+          <button 
+            type="button" 
+            className="cancel-button"
+            onClick={onCancel}
+            aria-label="Cancel and go back"
+          >
+            Cancel
+          </button>
+        )}
+        <button 
+          type="submit" 
+          className="submit-button"
+          disabled={!isFormValid()}
+          aria-label="On Click"
+          aria-describedby={!isFormValid() ? "submit-help" : undefined}
+        >
+          Make Your Reservation
+        </button>
+      </div>
       {!isFormValid() && (
         <span id="submit-help" className="sr-only">Please fill in all required fields to enable the submit button</span>
       )}

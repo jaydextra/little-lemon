@@ -9,7 +9,12 @@ function BookingPage({ availableTimes, dispatch, submitForm }) {
         <h1>Reserve a Table</h1>
         <p>Book your dining experience at Little Lemon</p>
       </div>
-      <BookingForm availableTimes={availableTimes} dispatch={dispatch} submitForm={submitForm} />
+      <BookingForm 
+        availableTimes={availableTimes} 
+        dispatch={dispatch} 
+        submitForm={submitForm}
+        onCancel={() => window.history.back()}
+      />
     </div>
   );
 }

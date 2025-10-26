@@ -39,6 +39,11 @@
   font-size: 1rem;
 }
 
+.reserve-button-link {
+  display: block;
+  text-decoration: none;
+}
+
 .reserve-button {
   background-color: #F4CE14;
   color: #495E57;
@@ -50,6 +55,7 @@
   height: 60px;
   font-weight: bold;
   transition: background-color 0.3s ease;
+  width: 100%;
 }
 
 .reserve-button:hover {

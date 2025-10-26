@@ -54,18 +54,38 @@
   margin: 0;
 }
 
-.submit-button {
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.submit-button,
+.cancel-button {
   padding: 1rem 2rem;
-  background-color: #F4CE14;
-  color: #495E57;
-  border: none;
   border-radius: 8px;
   font-family: 'Karla', sans-serif;
   font-size: 1.1rem;
   font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.2s ease;
-  margin-top: 1rem;
+  transition: all 0.2s ease;
+}
+
+.submit-button {
+  background-color: #F4CE14;
+  color: #495E57;
+  border: none;
+  flex: 1;
+}
+
+.cancel-button {
+  background-color: #EDEFEE;
+  color: #495E57;
+  border: 2px solid #495E57;
+}
+
+.cancel-button:hover {
+  background-color: #ddd;
 }
 
 .submit-button:hover {

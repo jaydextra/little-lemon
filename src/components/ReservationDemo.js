@@ -2,6 +2,8 @@ import React from 'react';
 import '../styles/ReservationDemo.css';
 import OccasionDropdown from './OccasionDropdown';
 
+import { Link } from 'react-router-dom';
+
 function ReservationDemo() {
   return (
     <section className="reservation-demo">
@@ -20,7 +22,9 @@ function ReservationDemo() {
           <input type="number" min="1" max="12" />
         </div>
         <OccasionDropdown />
-        <button className="reserve-button">Reserve Now</button>
+        <Link to="/booking" className="reserve-button-link">
+          <button className="reserve-button">Reserve Now</button>
+        </Link>
       </div>
     </section>
   );
