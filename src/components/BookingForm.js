@@ -1,22 +1,19 @@
 import React, { useState } from 'react';
 import '../styles/BookingForm.css';
 
-function BookingForm() {
+function BookingForm({ availableTimes, dispatch }) {
   // State for form fields
   const [date, setDate] = useState('');
   const [time, setTime] = useState('');
   const [guests, setGuests] = useState('');
   const [occasion, setOccasion] = useState('');
 
-  // Available times - this will be replaced with API call later
-  const [availableTimes] = useState([
-    '17:00',
-    '18:00',
-    '19:00',
-    '20:00',
-    '21:00',
-    '22:00'
-  ]);
+  // Handle date change and dispatch available times update
+  const handleDateChange = (e) => {
+    setDate(e.target.value);
+    // Dispatch the date to update available times
+    dispatch({ type: 'UPDATE_TIMES', date: e.target.value });
+  };
 
   // Handle form submission
   const handleSubmit = (e) => {
@@ -48,7 +45,7 @@ function BookingForm() {
           type="date"
           id="res-date"
           value={date}
-          onChange={(e) => setDate(e.target.value)}
+          onChange={handleDateChange}
           required
         />
       </div>
