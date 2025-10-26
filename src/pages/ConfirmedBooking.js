@@ -9,7 +9,7 @@ function ConfirmedBooking() {
   return (
     <div className="confirmed-booking">
       <div className="confirmation-card">
-        <div className="confirmation-icon">✓</div>
+        <div className="confirmation-icon" aria-label="Success">✓</div>
         <h1>Booking Confirmed!</h1>
         <p>Your reservation has been successfully confirmed.</p>
         

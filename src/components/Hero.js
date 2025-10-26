@@ -12,11 +12,11 @@ function Hero() {
             We are a family owned Mediterranean restaurant, focused on traditional 
             recipes served with a modern twist.
           </p>
-          <button className="book-table-btn">Reserve a Table</button>
+          <button className="book-table-btn" aria-label="On Click">Reserve a Table</button>
         </div>
         <div className="hero-image">
-          <div className="hero-image-placeholder">
-            <span>✕ Image placeholder</span>
+          <div className="hero-image-placeholder" aria-label="Hero image placeholder">
+            <span aria-hidden="true">✕ Image placeholder</span>
           </div>
         </div>
       </div>

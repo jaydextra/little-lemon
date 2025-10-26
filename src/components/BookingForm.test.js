@@ -80,13 +80,13 @@ describe('BookingForm', () => {
   describe('JavaScript Validation', () => {
     test('Submit button is disabled when form is empty', () => {
       render(<BookingForm availableTimes={mockAvailableTimes} dispatch={mockDispatch} submitForm={mockSubmitForm} />);
-      const submitButton = screen.getByRole('button', { name: /make your reservation/i });
+      const submitButton = screen.getByRole('button', { name: /on click/i });
       expect(submitButton).toBeDisabled();
     });
 
     test('Submit button is disabled when date is in the past', () => {
       render(<BookingForm availableTimes={mockAvailableTimes} dispatch={mockDispatch} submitForm={mockSubmitForm} />);
-      const submitButton = screen.getByRole('button', { name: /make your reservation/i });
+      const submitButton = screen.getByRole('button', { name: /on click/i });
       const dateInput = screen.getByLabelText('Choose date');
       
       // Set a past date
@@ -99,7 +99,7 @@ describe('BookingForm', () => {
 
     test('Submit button is enabled when all fields are valid', () => {
       render(<BookingForm availableTimes={mockAvailableTimes} dispatch={mockDispatch} submitForm={mockSubmitForm} />);
-      const submitButton = screen.getByRole('button', { name: /make your reservation/i });
+      const submitButton = screen.getByRole('button', { name: /on click/i });
       
       // Get form fields
       const dateInput = screen.getByLabelText('Choose date');
@@ -159,7 +159,7 @@ describe('BookingForm', () => {
       const timeSelect = screen.getByLabelText('Choose time');
       const guestsInput = screen.getByLabelText('Number of guests');
       const occasionSelect = screen.getByLabelText('Occasion');
-      const submitButton = screen.getByRole('button', { name: /make your reservation/i });
+      const submitButton = screen.getByRole('button', { name: /on click/i });
       
       // Fill in valid data
       const tomorrow = new Date();

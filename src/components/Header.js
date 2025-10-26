@@ -11,14 +11,14 @@ function Header() {
         </div>
         <span className="logo-text">LITTLE LEMON</span>
       </Link>
-      <nav>
+      <nav aria-label="Main navigation">
         <ul className="nav-links">
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/#about">About</Link></li>
-          <li><Link to="/#menu">Menu</Link></li>
-          <li><Link to="/booking">Reservations</Link></li>
-          <li><Link to="/#order">Order Online</Link></li>
-          <li><Link to="/#login">Login</Link></li>
+          <li><Link to="/" aria-label="Navigate to home page">Home</Link></li>
+          <li><Link to="/#about" aria-label="Navigate to about section">About</Link></li>
+          <li><Link to="/#menu" aria-label="Navigate to menu section">Menu</Link></li>
+          <li><Link to="/booking" aria-label="Navigate to reservations page">Reservations</Link></li>
+          <li><Link to="/#order" aria-label="Navigate to order online section">Order Online</Link></li>
+          <li><Link to="/#login" aria-label="Navigate to login section">Login</Link></li>
         </ul>
       </nav>
     </header>

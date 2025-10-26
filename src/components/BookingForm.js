@@ -175,9 +175,14 @@ function BookingForm({ availableTimes, dispatch, submitForm }) {
         type="submit" 
         className="submit-button"
         disabled={!isFormValid()}
+        aria-label="On Click"
+        aria-describedby={!isFormValid() ? "submit-help" : undefined}
       >
         Make Your Reservation
       </button>
+      {!isFormValid() && (
+        <span id="submit-help" className="sr-only">Please fill in all required fields to enable the submit button</span>
+      )}
     </form>
   );
 }

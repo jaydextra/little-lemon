@@ -7,8 +7,8 @@ function Footer() {
       <div className="footer-content">
         <div className="footer-logo-section">
           <div className="footer-logo-container">
-            <div className="logo-placeholder">
-              <span className="diagonal-lines">✕</span>
+            <div className="logo-placeholder" aria-label="Little Lemon Logo">
+              <span className="diagonal-lines" aria-hidden="true">✕</span>
             </div>
             <span className="logo-text">LITTLE LEMON</span>
           </div>
@@ -17,7 +17,7 @@ function Footer() {
             recipes served with a modern twist.
           </p>
         </div>
-        <div className="doormat-navigation">
+        <nav className="doormat-navigation" aria-label="Footer navigation">
           <h3>Navigation</h3>
           <ul>
             <li>Home</li>
@@ -27,7 +27,7 @@ function Footer() {
             <li>Order Online</li>
             <li>Login</li>
           </ul>
-        </div>
+        </nav>
       </div>
     </footer>
   );
