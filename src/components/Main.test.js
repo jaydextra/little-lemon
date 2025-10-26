@@ -1,17 +1,28 @@
 import { initializeTimes, updateTimes } from '../utils/bookingReducer';
 
 // Mock the global fetchAPI function
+const mockTimes = [
+  '17:00',
+  '18:00',
+  '19:00',
+  '20:00',
+  '21:00',
+  '22:00'
+];
+
 beforeAll(() => {
-  global.fetchAPI = jest.fn((date) => {
-    return [
-      '17:00',
-      '18:00',
-      '19:00',
-      '20:00',
-      '21:00',
-      '22:00'
-    ];
-  });
+  // Create a proper mock function
+  const mockFetchAPI = (date) => {
+    return mockTimes;
+  };
+  
+  // Set on global for Node test environment
+  global.fetchAPI = mockFetchAPI;
+  
+  // Also set on window for browser context
+  if (typeof window !== 'undefined') {
+    window.fetchAPI = mockFetchAPI;
+  }
 });
 
 describe('Booking Reducer Functions', () => {
