@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../styles/BookingForm.css';
 
-function BookingForm({ availableTimes, dispatch }) {
+function BookingForm({ availableTimes, dispatch, submitForm }) {
   // State for form fields
   const [date, setDate] = useState('');
   const [time, setTime] = useState('');
@@ -27,9 +27,9 @@ function BookingForm({ availableTimes, dispatch }) {
       occasion
     };
     
-    // Submit to API if available
-    if (typeof window.submitAPI !== 'undefined') {
-      const success = window.submitAPI(formData);
+    // Call the submitForm function passed from parent
+    if (submitForm) {
+      const success = submitForm(formData);
       
       if (success) {
         // Reset form after successful submission
@@ -37,23 +37,7 @@ function BookingForm({ availableTimes, dispatch }) {
         setTime('');
         setGuests('');
         setOccasion('');
-        
-        // Show success message
-        alert('Reservation submitted successfully!');
-      } else {
-        alert('Failed to submit reservation. Please try again.');
       }
-    } else {
-      // Fallback if API is not loaded
-      console.log('Form submitted:', formData);
-      
-      // Reset form
-      setDate('');
-      setTime('');
-      setGuests('');
-      setOccasion('');
-      
-      alert('Reservation submitted (API not loaded - demo mode)!');
     }
   };
 
