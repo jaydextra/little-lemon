@@ -4,7 +4,7 @@ import HomePage from '../pages/HomePage';
 import BookingPage from '../pages/BookingPage';
 
 // Initialize available times
-function initializeTimes() {
+export function initializeTimes() {
   return [
     '17:00',
     '18:00',
@@ -16,7 +16,7 @@ function initializeTimes() {
 }
 
 // Update available times based on selected date
-function updateTimes(state, action) {
+export function updateTimes(state, action) {
   // For now, return the same available times regardless of date
   // This will be replaced with actual API call later
   switch (action.type) {
