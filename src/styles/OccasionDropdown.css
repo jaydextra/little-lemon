@@ -29,6 +29,7 @@
   cursor: pointer;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
+  color: #495E57;
 }
 
 .dropdown-button:hover {
@@ -37,7 +38,7 @@
 
 .dropdown-button.selected {
   background-color: #495E57;
-  color: white;
+  color: #F4CE14;
 }
 
 .chevron {
@@ -91,7 +92,7 @@
 
 .dropdown-item.active {
   background-color: #495E57;
-  color: white;
+  color: #F4CE14;
 }
 
 /* Responsive */

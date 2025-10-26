@@ -4,12 +4,22 @@ import '../styles/Hero.css';
 function Hero() {
   return (
     <section className="hero">
-      <h1 className="hero-title">Little Lemon</h1>
-      <p className="hero-location">New York, New York</p>
-      <p className="hero-description">
-        Mediterranean food that brings warmth and flavor to your table.
-      </p>
-      <button className="book-table-btn">Book a Table</button>
+      <div className="hero-content">
+        <div className="hero-text">
+          <h1 className="hero-title">Little Lemon</h1>
+          <p className="hero-location">Restaurant</p>
+          <p className="hero-description">
+            We are a family owned Mediterranean restaurant, focused on traditional 
+            recipes served with a modern twist.
+          </p>
+          <button className="book-table-btn">Reserve a Table</button>
+        </div>
+        <div className="hero-image">
+          <div className="hero-image-placeholder">
+            <span>✕ Image placeholder</span>
+          </div>
+        </div>
+      </div>
     </section>
   );
 }
