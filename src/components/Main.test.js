@@ -1,4 +1,4 @@
-import { initializeTimes, updateTimes } from './Main';
+import { initializeTimes, updateTimes } from '../utils/bookingReducer';
 
 describe('Booking Reducer Functions', () => {
   describe('initializeTimes', () => {
