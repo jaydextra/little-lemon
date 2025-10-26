@@ -1,25 +1,16 @@
 import './App.css';
+import { BrowserRouter } from 'react-router-dom';
 import Header from './components/Header';
-import Hero from './components/Hero';
-import ReservationDemo from './components/ReservationDemo';
-import Highlights from './components/Highlights';
-import Testimonials from './components/Testimonials';
-import About from './components/About';
+import Main from './components/Main';
 import Footer from './components/Footer';
 
 function App() {
   return (
-    <>
+    <BrowserRouter>
       <Header />
-      <main>
-        <Hero />
-        <ReservationDemo />
-        <Highlights />
-        <Testimonials />
-        <About />
-      </main>
+      <Main />
       <Footer />
-    </>
+    </BrowserRouter>
   );
 }
 

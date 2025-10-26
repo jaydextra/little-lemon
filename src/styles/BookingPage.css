@@ -1,0 +1,45 @@
+.booking-page {
+  min-height: 60vh;
+}
+
+.booking-hero {
+  padding: 3rem;
+  background-color: #495E57;
+  color: white;
+  text-align: center;
+}
+
+.booking-hero h1 {
+  color: #F4CE14;
+  margin-bottom: 1rem;
+}
+
+.booking-hero p {
+  color: white;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .booking-hero {
+    padding: 2rem 1.5rem;
+  }
+  
+  .booking-hero h1 {
+    font-size: 2rem;
+  }
+  
+  .booking-hero p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .booking-hero {
+    padding: 1.5rem 1rem;
+  }
+  
+  .booking-hero h1 {
+    font-size: 1.5rem;
+  }
+}
+
