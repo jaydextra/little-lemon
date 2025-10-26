@@ -2,6 +2,7 @@
 function getFetchAPI() {
   // Try multiple ways to access the API function
   const api = 
+    // eslint-disable-next-line no-undef
     (typeof globalThis !== 'undefined' && globalThis.fetchAPI) ||
     (typeof window !== 'undefined' && window.fetchAPI) ||
     (typeof global !== 'undefined' && global.fetchAPI);
