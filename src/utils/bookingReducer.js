@@ -1,12 +1,12 @@
 // Helper function to get fetchAPI
 function getFetchAPI() {
-  if (typeof window !== 'undefined' && window.fetchAPI) {
-    return window.fetchAPI;
-  }
-  if (typeof global !== 'undefined' && global.fetchAPI) {
-    return global.fetchAPI;
-  }
-  return null;
+  // Try multiple ways to access the API function
+  const api = 
+    (typeof globalThis !== 'undefined' && globalThis.fetchAPI) ||
+    (typeof window !== 'undefined' && window.fetchAPI) ||
+    (typeof global !== 'undefined' && global.fetchAPI);
+    
+  return api || null;
 }
 
 // Initialize available times using API
