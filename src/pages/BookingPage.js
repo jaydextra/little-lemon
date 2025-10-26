@@ -1,5 +1,5 @@
 import React from 'react';
-import ReservationDemo from '../components/ReservationDemo';
+import BookingForm from '../components/BookingForm';
 import '../styles/BookingPage.css';
 
 function BookingPage() {
@@ -9,7 +9,7 @@ function BookingPage() {
         <h1>Reserve a Table</h1>
         <p>Book your dining experience at Little Lemon</p>
       </div>
-      <ReservationDemo />
+      <BookingForm />
     </div>
   );
 }
