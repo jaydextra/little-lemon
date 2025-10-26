@@ -56,9 +56,43 @@
   background-color: #d4b814;
 }
 
+@media (max-width: 968px) {
+  .reservation-demo {
+    padding: 2.5rem 2rem;
+  }
+  
+  .reservation-demo h2 {
+    font-size: 2rem;
+  }
+}
+
 @media (max-width: 768px) {
   .reservation-demo {
-    padding: 2rem 1rem;
+    padding: 2rem 1.5rem;
+  }
+  
+  .reservation-demo h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .reservation-demo {
+    padding: 1.5rem 1rem;
+  }
+  
+  .reservation-demo h2 {
+    font-size: 1.5rem;
+  }
+  
+  .form-group input {
+    height: 45px;
+    font-size: 0.9rem;
+  }
+  
+  .reserve-button {
+    height: 50px;
+    font-size: 0.95rem;
   }
 }
 

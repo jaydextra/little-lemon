@@ -40,9 +40,42 @@
   border-radius: 4px;
 }
 
+@media (max-width: 968px) {
+  .about {
+    padding: 2.5rem 2rem;
+  }
+  
+  .about-text h2 {
+    font-size: 2rem;
+  }
+}
+
 @media (max-width: 768px) {
+  .about {
+    padding: 2rem 1.5rem;
+  }
+  
   .about-content {
     grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .about-text h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about {
+    padding: 1.5rem 1rem;
+  }
+  
+  .about-text h2 {
+    font-size: 1.5rem;
+  }
+  
+  .image-placeholder {
+    height: 150px;
   }
 }
 

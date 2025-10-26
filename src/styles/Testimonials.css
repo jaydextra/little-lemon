@@ -38,3 +38,37 @@
   color: #333333;
 }
 
+@media (max-width: 968px) {
+  .testimonials {
+    padding: 2.5rem 2rem;
+  }
+  
+  .testimonials h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonials {
+    padding: 2rem 1.5rem;
+  }
+  
+  .testimonials h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonials {
+    padding: 1.5rem 1rem;
+  }
+  
+  .testimonials h2 {
+    font-size: 1.5rem;
+  }
+  
+  .testimonial-card {
+    padding: 1.5rem;
+  }
+}
+

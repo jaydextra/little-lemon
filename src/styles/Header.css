@@ -47,5 +47,55 @@ header.navigation nav {
   color: #495E57;
   font-weight: 500;
   text-transform: none;
+  white-space: nowrap;
+}
+
+@media (max-width: 968px) {
+  header.navigation {
+    padding: 1rem 2rem;
+  }
+  
+  .nav-links {
+    gap: 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  header.navigation {
+    padding: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .logo-container {
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .logo-text {
+    font-size: 1.2rem;
+  }
+  
+  .nav-links {
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    gap: 0.5rem;
+  }
+  
+  .nav-links li {
+    padding: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-links {
+    flex-wrap: wrap;
+  }
+  
+  .nav-links li {
+    font-size: 0.8rem;
+  }
 }
 
